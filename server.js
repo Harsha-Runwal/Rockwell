@@ -13,16 +13,18 @@ app.use(express.static(path.join(__dirname,'public')));
  
 
 app.get('/hello', function (req, res) {
-  console.log("CAlling rest api");
-  var person={firstName:'Ravi',lastName:'Tambade',age:43};
+  console.log("--CALLING rest api old--");
+  var person={firstName:'- Harsha ',lastName:'Runwal'};
   res.send(person);
 });
 
- 
-var server = app.listen(8081, function () {
-
-  var host = server.address().address
-  var port = server.address().port
-
-  console.log("Example app listening at http://localhost:8081", host, port)
-})
+ app.listen(9459, '0.0.0.0', () => {
+    console.log('Example V-1.0 app is listening on http://0.0.0.0:9459');
+});
+// var server = app.listen(9459, function () {
+//   var host = server.address().address
+//   var port = server.address().port
+//   console.log("host = ",host)
+//  console.log("port = ",port)
+//   console.log("Example app is listening at http://localhost:9459", host, port)
+// })
